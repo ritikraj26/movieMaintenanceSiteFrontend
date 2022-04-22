@@ -1,0 +1,22 @@
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Release Date</th>
+            <th>Number of Actors</th>
+            <th>Upvotes</th>
+            <th>Downvotes</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let dataItem of movieList">
+            <td>{{ dataItem.title }}</td>
+            <td>{{ dataItem.description }}</td>
+            <td>{{ dataItem.releaseDate }}</td>
+            <td>{{ dataItem.numberOfActors }}</td>
+            <td>{{ dataItem.upvote }}</td>
+            <td>{{ dataItem.downvote }}</td>
+        </tr>
+    </tbody>
+</table>

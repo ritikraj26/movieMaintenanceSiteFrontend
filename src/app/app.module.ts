@@ -10,12 +10,16 @@ import { SharedService } from './shared.service';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ShowActorComponent } from './actor/show-actor/show-actor.component';
+import { ShowMovieComponent } from './movie/show-movie/show-movie.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MovieComponent,
-    ActorComponent
+    ActorComponent,
+    ShowActorComponent,
+    ShowMovieComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,17 @@
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Date</th>
+            <th>Date of Birth</th>
+            <th>Number of Movies</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let dataItem of actorList">
+            <td>{{ dataItem.name }}</td>
+            <td>{{ dataItem.dateOfBirth }}</td>
+            <td>{{ dataItem.numberOfMovies }}</td>
+        </tr>
+    </tbody>
+</table>
