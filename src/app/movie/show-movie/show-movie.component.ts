@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { SharedService } from 'src/app/shared.service';
 
+
 @Component({
   selector: 'app-show-movie',
   templateUrl: './show-movie.component.html',
@@ -38,7 +39,7 @@ export class ShowMovieComponent implements OnInit {
     });
   }
 
-  sortResult(item:any,asc:boolean){
+  sortResultTitle(item:any,asc:boolean){
     this.movieList = this.movieList.sort(function(a:any,b:any){
       if(asc){
         return (a[item]>b[item])?1:((a[item]<b[item])?-1:0);
@@ -46,7 +47,18 @@ export class ShowMovieComponent implements OnInit {
       else{
         return (a[item]<b[item])?1:((a[item]>b[item])?-1:0);
       }
-    })
+    });
+  }
+
+  sortResultDOR(item:any,asc:boolean){
+    this.movieList = this.movieList.sort(function(a:any,b:any){
+      if(asc){
+        return (a[item]>b[item])?1:((a[item]<b[item])?-1:0);
+      }
+      else{
+        return (a[item]<b[item])?1:((a[item]>b[item])?-1:0);
+      }
+    });
   }
 
 }

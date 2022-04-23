@@ -20,16 +20,25 @@
             <td>{{ dataItem.upvote }}</td>
             <td>{{ dataItem.downvote }}</td>
             <td>
-                <button type="button" (click)="onLike(dataItem)" class="btn btn-light mr-1">
+                <button type="button" (click)="onLike(dataItem)" class="m-1 btn btn-light btn-outline-primary mr-1">
                     Like
                 </button>
-                <button type="button" (click)="onDislike(dataItem)" class="btn btn-light mr-1">
+                <button type="button" (click)="onDislike(dataItem)" class="m-1 btn btn-light btn-outline-success mr-1">
                     Dislike
                 </button>
             </td>
         </tr>
     </tbody>
     </table>
-    <button type="button" class="btn btn-light" (click)="sortResult('title',true)">Up</button>
-    <button type="button" class="btn btn-light" (click)="sortResult('title',false)">Down</button>
+    <div ngbDropdown class="dropdown">
+        <button ngbDropdownToggle class="btn btn-light btn-outline-dark dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Sort by
+        </button>
+        <div ngbDropdownMenu class="dropdown-menu" aria-labelledby="dropdownMenu2">
+          <button ngbDropdownItem class="dropdown-item" type="button " (click)="sortResultTitle('title',true)">Movie Title in Ascending</button>
+          <button ngbDropdownItem class="dropdown-item" type="button" (click)="sortResultTitle('title',false)">Movie Title in Descending</button>
+          <button ngbDropdownItem class="dropdown-item" type="button" (click)="sortResultDOR('releaseDate',true)">Date of Release in Ascending</button>
+          <button ngbDropdownItem class="dropdown-item" type="button" (click)="sortResultDOR('releaseDate',false)">Date of Release in Descending</button>
+        </div>
+      </div>
 </div>
