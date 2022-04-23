@@ -19,7 +19,7 @@ import { ShowMovieComponent } from './movie/show-movie/show-movie.component';
     MovieComponent,
     ActorComponent,
     ShowActorComponent,
-    ShowMovieComponent
+    ShowMovieComponent,
   ],
   imports: [
     BrowserModule,

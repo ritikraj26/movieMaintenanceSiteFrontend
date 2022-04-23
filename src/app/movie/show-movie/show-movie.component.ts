@@ -16,6 +16,12 @@ export class ShowMovieComponent implements OnInit {
     this.refreshMovieList();
   }
 
+
+  onLike(item:any){
+    item.upvote=item.upvote +1;
+    this.service.addLikes(item).subscribe({});
+  }
+
   refreshMovieList(){
     this.service.getMovieList().subscribe(data=>{
       this.movieList=data;

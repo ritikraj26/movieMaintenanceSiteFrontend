@@ -1,4 +1,7 @@
-<table class="table table-striped">
+
+<div>
+    
+    <table class="table table-striped">
     <thead>
         <tr>
             <th>Title</th>
@@ -17,6 +20,15 @@
             <td>{{ dataItem.numberOfActors }}</td>
             <td>{{ dataItem.upvote }}</td>
             <td>{{ dataItem.downvote }}</td>
+            <td>
+                <button type="button" (click)="onLike(dataItem)" class="btn btn-light mr-1">
+                    Like
+                </button>
+                <!-- <button type="button" class="btn btn-light mr-1">
+                    Dislike
+                </button> -->
+            </td>
         </tr>
     </tbody>
 </table>
+</div>

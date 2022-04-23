@@ -24,5 +24,9 @@ export class SharedService {
   addActor(val:any){
     return this.http.post(this.APIUrl + '/actor/',val);
   }
+  
+  addLikes(val:any){
+    return this.http.put(this.APIUrl + '/movie/',val);
+  }
 
 }
