@@ -26,10 +26,27 @@ export class ShowMovieComponent implements OnInit {
     this.service.addDislikes(item).subscribe({});
   }
 
+  sortMovies(){
+    this.service.getMovieList().subscribe(data=>{
+      this.movieList=data;
+    });
+
+  }
   refreshMovieList(){
     this.service.getMovieList().subscribe(data=>{
       this.movieList=data;
     });
+  }
+
+  sortResult(item:any,asc:boolean){
+    this.movieList = this.movieList.sort(function(a:any,b:any){
+      if(asc){
+        return (a[item]>b[item])?1:((a[item]<b[item])?-1:0);
+      }
+      else{
+        return (a[item]<b[item])?1:((a[item]>b[item])?-1:0);
+      }
+    })
   }
 
 }
