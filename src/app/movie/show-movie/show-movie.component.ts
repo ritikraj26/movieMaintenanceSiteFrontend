@@ -16,10 +16,14 @@ export class ShowMovieComponent implements OnInit {
     this.refreshMovieList();
   }
 
-
   onLike(item:any){
     item.upvote=item.upvote +1;
     this.service.addLikes(item).subscribe({});
+  }
+
+  onDislike(item:any){
+    item.downvote=item.downvote+1;
+    this.service.addDislikes(item).subscribe({});
   }
 
   refreshMovieList(){

@@ -14,7 +14,7 @@ export class SharedService {
   }
 
   addMovie(val:any){
-    return this.http.post(this.APIUrl + '/movie/',val);
+    return this.http.post(this.APIUrl + '/movie/', val);
   }
 
   getActorList():Observable<any[]>{
@@ -22,11 +22,15 @@ export class SharedService {
   }
 
   addActor(val:any){
-    return this.http.post(this.APIUrl + '/actor/',val);
+    return this.http.post(this.APIUrl + '/actor/', val);
   }
   
   addLikes(val:any){
-    return this.http.put(this.APIUrl + '/movie/',val);
+    return this.http.put(this.APIUrl + '/movie/', val);
+  }
+
+  addDislikes(val:any){
+    return this.http.put(this.APIUrl + '/movie/', val);
   }
 
 }
